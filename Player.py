@@ -6,7 +6,7 @@ class Player:
     def __init__(self, name: str) -> None:
         self.name : str = name
         self.set_of_cards : set = set()
-        self.status = None
+        self.status : PlayerStatus = None
     
     def getName(self) -> str:
         return self.name
@@ -23,18 +23,14 @@ class Player:
     def addCard(self, card) -> None:
         self.set_of_cards.add(card)
 
-    def setStatus(self) -> None :
-        score = self.getScore()
-        if(score < 17):
-            self.status = PlayerStatus.HIT
-        elif(score >= 17 and score <= 21):
-            self.status = PlayerStatus.STICK
-        else:
-            self.status = PlayerStatus.BUST
+    def setStatus(self, status) -> None :
+        self.status = status
 
     def getStatus(self) -> PlayerStatus :
-        self.setStatus()
         return self.status
+
+    def changeStatus(self, new_status) -> None :
+        self.status = new_status
         
 
     def __str__(self) -> str:
