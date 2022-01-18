@@ -71,16 +71,6 @@ class TestEmployee(unittest.TestCase):
         self.assertEqual(self.player.getScore(), 13)
 
     
-    def test_get_status(self):
-        """
-        Test getStatus()
-        """
-
-        self.player.setSetOfCards({(2, "DIAMONDS"), (3, "HEARTS")})
-
-        self.player.addCard((8, "SPADES"))
-
-        self.assertEqual(self.player.getStatus(), PlayerStatus.HIT)
 
 
 if __name__ == '__main__':

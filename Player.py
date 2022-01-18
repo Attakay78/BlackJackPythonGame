@@ -29,8 +29,8 @@ class Player:
     def getStatus(self) -> PlayerStatus :
         return self.status
 
-    def changeStatus(self, new_status) -> None :
-        self.status = new_status
+    # def changeStatus(self, new_status) -> None :
+    #     self.status = new_status
         
 
     def __str__(self) -> str:

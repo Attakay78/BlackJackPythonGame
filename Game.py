@@ -55,7 +55,7 @@ class Game:
         else:
             player.setStatus(PlayerStatus.BUST)
             
-            
+
     def start(self) -> None :
         self.game_status = GameStatus.START
 
@@ -78,6 +78,7 @@ class Game:
             else:
                 self.players_bust.append(player)
 
+
         while(self.game_status != GameStatus.FINISH):
             
             scored_21 = []
@@ -86,7 +87,7 @@ class Game:
                 if(score == 21):
                     scored_21.append(player)
 
-            if(scored_21 == 1):
+            if(len(scored_21) == 1):
                 print(f"Game ended, won by {scored_21[0].getName()} with score {scored_21[0].getScore()}")
                 self.game_status = GameStatus.FINISH
             elif(len(scored_21) > 1):
