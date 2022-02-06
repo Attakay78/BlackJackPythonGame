@@ -3,6 +3,6 @@ node{
         echo "I'm building the code"
     }
     stage("Test"){
-        bat 'python test_player.py'
+        sh 'python test_player.py'
     }
 }
