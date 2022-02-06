@@ -32,7 +32,7 @@ class TestPlayer(unittest.TestCase):
         Test player stats 
         """
 
-        self.assertEqual(self.player.getName(), 'Player 1')
+        self.assertEqual(self.player.get_name(), 'Player 1')
         self.assertEqual(self.player.set_of_cards, set())  
         self.assertEqual(self.player.status, None)
 
@@ -42,9 +42,9 @@ class TestPlayer(unittest.TestCase):
         Test setSetOfCards()
         """
 
-        self.player.setSetOfCards({(2, "DIAMONDS"), (3, "HEARTS")})
+        self.player.set_set_of_cards({(2, "DIAMONDS"), (3, "HEARTS")})
 
-        self.assertEqual(self.player.getSetOfCards(), {(2, "DIAMONDS"), (3, "HEARTS")})
+        self.assertEqual(self.player.get_set_of_cards(), {(2, "DIAMONDS"), (3, "HEARTS")})
     
 
     def test_add_card(self) -> None:
@@ -52,11 +52,11 @@ class TestPlayer(unittest.TestCase):
         test addCard()
         """
 
-        self.player.setSetOfCards({(2, "DIAMONDS"), (3, "HEARTS")})
+        self.player.set_set_of_cards({(2, "DIAMONDS"), (3, "HEARTS")})
 
-        self.player.addCard((8, "SPADES"))
+        self.player.add_card((8, "SPADES"))
 
-        self.assertEqual(self.player.getSetOfCards(), {(2, "DIAMONDS"), (3, "HEARTS"), (8, "SPADES")})
+        self.assertEqual(self.player.get_set_of_cards(), {(2, "DIAMONDS"), (3, "HEARTS"), (8, "SPADES")})
 
 
     def test_get_score(self):
@@ -64,11 +64,11 @@ class TestPlayer(unittest.TestCase):
         Test getScore()
         """
 
-        self.player.setSetOfCards({(2, "DIAMONDS"), (3, "HEARTS")})
+        self.player.set_set_of_cards({(2, "DIAMONDS"), (3, "HEARTS")})
 
-        self.player.addCard((8, "SPADES"))
+        self.player.add_card((8, "SPADES"))
 
-        self.assertEqual(self.player.getScore(), 13)
+        self.assertEqual(self.player.get_score(), 13)
 
     
 
