@@ -1,8 +1,8 @@
 import unittest
 from Player import Player
-from PlayerStatus import PlayerStatus
+# from PlayerStatus import PlayerStatus
 
-class TestEmployee(unittest.TestCase):
+class TestPlayer(unittest.TestCase):
 
 
     @classmethod

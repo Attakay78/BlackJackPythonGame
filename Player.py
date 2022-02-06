@@ -8,33 +8,30 @@ class Player:
         self.set_of_cards : set = set()
         self.status : PlayerStatus = None
     
-    def getName(self) -> str:
+    def get_name(self) -> str:
         return self.name
 
-    def getScore(self) -> int :
+    def get_score(self) -> int :
         return reduce(lambda x, y : x + y , [item[0] for item in self.set_of_cards])
 
-    def setSetOfCards(self, listOfCards : set) -> None:
+    def set_set_of_cards(self, listOfCards : set) -> None:
         self.set_of_cards = listOfCards
 
-    def getSetOfCards(self) -> set :
+    def get_set_of_cards(self) -> set :
         return self.set_of_cards
 
-    def addCard(self, card) -> None:
+    def add_card(self, card) -> None:
         self.set_of_cards.add(card)
 
-    def setStatus(self, status) -> None :
+    def set_status(self, status) -> None :
         self.status = status
 
-    def getStatus(self) -> PlayerStatus :
+    def get_status(self) -> PlayerStatus :
         return self.status
-
-    # def changeStatus(self, new_status) -> None :
-    #     self.status = new_status
         
 
     def __str__(self) -> str:
-        return f"Name: {self.name}, score: {self.getScore()}, status: {self.getStatus()}"
+        return f"Name: {self.name}, score: {self.get_score()}, status: {self.get_status()}"
 
     def __repr__(self) -> str:
-        return f"Name: {self.name}, score: {self.getScore()}, status: {self.getStatus()}"
+        return f"Name: {self.name}, score: {self.get_score()}, status: {self.get_status()}"
