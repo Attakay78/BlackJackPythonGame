@@ -23,7 +23,7 @@ class Game:
 
     # Function to create deck of cards from Suit and Face enum constants
     def create_deck(self) -> list:
-        return [(int(face.value), suit.name) for suit in Suit for face in Face]
+        retur [(int(face.value), suit.name) for suit in Suit for face in Face]
 
 
     # Function to shuffle deck of cards using shuffle method
